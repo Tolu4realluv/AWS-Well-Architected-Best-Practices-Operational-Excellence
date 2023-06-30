@@ -30,3 +30,4 @@ As a solution Architect for the company taksed with the responsibility of having
 
 ## Proposed Architecture
 
+![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/starting%20image.png)
