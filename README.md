@@ -13,3 +13,5 @@ By running this project, we will be able to:
 * Install and start Amazon CloudWatch agent with AWS Systems Manager
 * Validate customs metric and log groups for Amazon EC2 instances in Amazon CloudWatch
 
+## Evaluating the existing Architecture.
+
