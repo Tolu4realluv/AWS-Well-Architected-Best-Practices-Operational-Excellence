@@ -15,3 +15,5 @@ By running this project, we will be able to:
 
 ## Evaluating the existing Architecture.
 
+![] (https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/starting%20image.png)
+
