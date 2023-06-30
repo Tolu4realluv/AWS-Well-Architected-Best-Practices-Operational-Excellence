@@ -17,14 +17,16 @@ By running this project, we will be able to:
 
 ![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/starting%20image.png)
 
-The Architecture contains a single Amazon VPC, with an internet gateway and a 2 subnets. The subnets are labelled public subnet and private subnet. Each subnets contains a single EC2 instance, one labelled web app instance and one labelled database instance.
+The company is a retail business and one of the main application of the company is a product catalog a. The Company's  Architecture contains a single Amazon VPC, with an internet gateway and a 2 subnets. The subnets are labelled public subnet and private subnet. Each subnets contains a single EC2 instance, one labelled web app instance and one labelled database instance.
 After running the AWS Well achitected framework review, it recommends the following:
 
 * Automation : Most of the operational task are performed manually and the company wants to Automate some of the operational tasks and provide visibility into most performance metric like memory and disk usage etc. and additionally a centralized log monitoring for database  and Application is needed.
 * Availability : A highly available architecture is required for the product catalog App
 * Security : Security is a top proirity for the company
 * Rightsizing Amazon EC2 instances: The company is not sure about their current EC2 instance size and are also expecting an increase in traffic in the nearest future.
-* Cost : Some applications are not using 
+* Cost : Some applications are not using the approved instance types in accordance with the company's architecture standards and these increases cost due to overprovision of resources.
 
 As a solution Architect for the company taksed with the responsibility of having an Architecture with AWS best practices applied, We want the Architecture to meet new performance requirement, mitigate riskas and save money and also take Automation into consideration.
+
+## Proposed Architecture
 
