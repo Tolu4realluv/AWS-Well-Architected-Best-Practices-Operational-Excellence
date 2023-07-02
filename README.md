@@ -44,7 +44,18 @@ Now We Begin to Implement The new Architecture after successfully check the exis
 
 ## Task 1: Tag the Amazon EC2 Instances.
 
+With AWS, customers can assign metadata to their AWS resources in the form of Tags. Each Tags is a simple label consisting of customer-defined key and optional value. Tags makes it easier to manage, search for, and filter resources. Tags are a great way to organise AWS resources, establish governance and enforce permissions. and they are critical to cost attribution for cost optimization. 
 
+* On the AWS console, we search for EC2 and clicked on Instances,
+* we select the wa-web-server instance only and chose Tags on the lower half of the screen.
+* chose Manage Tags and add new tag
+* Create Tag 1 for key we put __Environment__ and for Value-optional we put __Production__
+* Create Tag 2 for key we put __App__ and for Value-optional we put __Product-Catalog__
+* we chose save and return to the instances page
+* We now select the wa-db-server instance only and repeat the previous three steps by creating Tags.
+  
+After succesfully creating the Tags, we get the following message:
+![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/product.JPG)
 
 
 
