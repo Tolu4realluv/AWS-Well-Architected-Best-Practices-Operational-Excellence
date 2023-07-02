@@ -26,8 +26,26 @@ After running the AWS Well achitected framework review, it recommends the follow
 * Rightsizing Amazon EC2 instances: The company is not sure about their current EC2 instance size and are also expecting an increase in traffic in the nearest future.
 * Cost : Some applications are not using the approved instance types in accordance with the company's architecture standards and these increases cost due to overprovision of resources.
 
-As a solution Architect for the company taksed with the responsibility of having an Architecture with AWS best practices applied, We want the Architecture to meet new performance requirement, mitigate riskas and save money and also take Automation into consideration.
+As a solution Architect for the company taksed with the responsibility of having an Architecture with AWS best practices applied, We want the Architecture to meet new performance requirement, mitigate risks and save money and also take Automation into consideration.
 
 ## Proposed Architecture
 
 ![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/Proposed.png)
+
+The Architecture is an Amazon VPC containing 2 avail;ability Zones. There are 6 total subnets in the environment, with each availabi;lity zone having 3 of the subnets. the subnets are labelled and divided by availability zone such as: 1 Public subnet, 1 Private subnet, and 1 db Private subnet. Each of the private subnets is part of an Autoscaling Group 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
