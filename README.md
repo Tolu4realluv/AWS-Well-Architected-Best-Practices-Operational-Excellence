@@ -34,11 +34,15 @@ As a solution Architect for the company taksed with the responsibility of having
 
 The Architecture is an Amazon VPC containing 2 avail;ability Zones. There are 6 total subnets in the environment, with each availabi;lity zone having 3 of the subnets. the subnets are labelled and divided by availability zone such as: 1 Public subnet, 1 Private subnet, and 1 db Private subnet. Each of the private subnets is part of an Autoscaling Group and contain 1 web server each. Each of the db private subnets contain 1 Amazon RDS instance each. Internet traffic flows into an internet gateway, to an Application load balancer residing in the public subnets, Then to the Autoscaling group in the private subnet and finally to the Amazon RDS primary instance in the db private subnet. Supporting management, automation & monitoring services for the environment are; Amazon CloudWatch, Amazon Cloudtrail, AWS CloudFormation,  AWS config & AWS system manager. Supporting security services for the evvironment are AWS Identity and Access Management and AWS Secrets Manager. 
 
-_ ** The Operational Excellence pillar includes the ability to support development and run workloads effectively, gain insight into their operations, and continuosly improve supporting processes and procedures to deliver business value. ** _
+___The Operational Excellence pillar includes the ability to support development and run workloads effectively, gain insight into their operations, and continuosly improve supporting processes and procedures to deliver business value.___ 
 
+ Recall tha some of the discovery after running the AWS well-Architected Framework review was the need to automate some of the operational tasks, lack of visibility into important metrics such as memory and disk usage for the EC2 instances. The want an automated process to get that information. Additionally, the need a centralized log monitoring for the database and the application instances.
 
+Now We Begin to Implement The new Architecture after successfully check the existing Architecture and adding new entries into the product catalog application.
 
+![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/Proposed.png)
 
+## Task 1: Tag the Amazon EC2 Instances.
 
 
 
