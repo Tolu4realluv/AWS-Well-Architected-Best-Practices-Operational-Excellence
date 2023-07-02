@@ -70,7 +70,8 @@ In the __Group resources__ section, both of our previously tagged Amazon EC2 are
 * on the __create query-based-group page__ in the __Group details__ section, for __Group name__ we input __rg-wa__ and for __Group Decription__ we input __Resource Group for Well-Architected Labs.__ and then we chose __create groups__.
 
 The browser displays the rg-wa Group details page.
-![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/Tags.JPG)
+
+![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/Resource%20group.JPG)
 
 
 
