@@ -32,7 +32,9 @@ As a solution Architect for the company taksed with the responsibility of having
 
 ![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/Proposed.png)
 
-The Architecture is an Amazon VPC containing 2 avail;ability Zones. There are 6 total subnets in the environment, with each availabi;lity zone having 3 of the subnets. the subnets are labelled and divided by availability zone such as: 1 Public subnet, 1 Private subnet, and 1 db Private subnet. Each of the private subnets is part of an Autoscaling Group and contain 1 web server each
+The Architecture is an Amazon VPC containing 2 avail;ability Zones. There are 6 total subnets in the environment, with each availabi;lity zone having 3 of the subnets. the subnets are labelled and divided by availability zone such as: 1 Public subnet, 1 Private subnet, and 1 db Private subnet. Each of the private subnets is part of an Autoscaling Group and contain 1 web server each. Each of the db private subnets contain 1 Amazon RDS instance each. Internet traffic flows into an internet gateway, to an Application load balancer residing in the public subnets, Then to the Autoscaling group in the private subnet and finally to the Amazon RDS primary instance in the db private subnet. Supporting management, automation & monitoring services for the environment are; Amazon CloudWatch, Amazon Cloudtrail, AWS CloudFormation,  AWS config & AWS system manager. Supporting security services for the evvironment are AWS Identity and Access Management and AWS Secrets Manager. 
+
+_ **The Operational Excellence pillar includes the ability to support development and run workloads effectively, gain insight into their operations, and continuosly improve supporting processes and procedures to deliver business value.
 
 
 
