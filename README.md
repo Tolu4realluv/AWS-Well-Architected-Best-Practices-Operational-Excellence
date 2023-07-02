@@ -55,9 +55,22 @@ With AWS, customers can assign metadata to their AWS resources in the form of Ta
 * We now select the wa-db-server instance only and repeat the previous three steps by creating Tags.
   
 After succesfully creating the Tags, we get the following message:
-![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/product.JPG)
+![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/Tags.JPG)
 
+## Task 1: Create A Resource Group.
+A resouce group is a collection of AWS resources in the same region that match a tag-based criteria provided in a search query. Resource group can be used to perform bulk actions such as Applying updates or security patches, upgrading an application version, installing new softwares, etc.
+* At the top of AWS management console, we searched for and selected __Resource Groups & Tag Editor__
+* we clicked create a resource group, the brower displayed the __create query-based-group page__
+* on the page, in __Group type__ section, we select __Tag Based__
+* on the page, in the __Grouping criteria__ section, for Resources, we select __AWS::EC2::Instance__
+* For Tags, For __Tag-Key__ we typed __App__ and for __Optional tag value__, we input __Product-Catalog__ and we chose save.
+* For Tags, For __Tag-Key__ we typed __Environment__ and for __Optional tag value__, we input __Production__ and we chose save.
+* Then we chose preview group names.
+In the __Group resources__ section, both of our previously tagged Amazon EC2 are listed.
+* on the __create query-based-group page__ in the __Group details__ section, for __Group name__ we input __rg-wa__ and for __Group Decription__ we input __Resource Group for Well-Architected Labs.__ and then we chose __create groups__.
 
+The browser displays the rg-wa Group details page.
+![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/Tags.JPG)
 
 
 
