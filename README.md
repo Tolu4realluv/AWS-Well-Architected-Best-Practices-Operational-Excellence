@@ -40,7 +40,7 @@ ___The Operational Excellence pillar includes the ability to support development
 
 Now We Begin to Implement The new Architecture after successfully check the existing Architecture and adding new entries into the product catalog application.
 
-![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/Proposed.png)
+![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/product.JPG)
 
 ## Task 1: Tag the Amazon EC2 Instances.
 
