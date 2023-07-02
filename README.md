@@ -97,10 +97,87 @@ The CloudWatch agent monitors activities on our EC2 instances to collect logs an
 
 * In the navigation menu on the AWS Systems manager page under __Node Management__, we chose run command. This takes us to the __Run Command__ page.
 * in the command document search box we input __AWS-ConfigureAWSPackage__ and press enter and then select the __AWS-ConfigureAWSPackage__.
-* On the __Run__ command page in the __Target Selection__ section, for __Target Selection__, we select __Choose Resource Group__
+* On the __Run__ command page in the __Target Selection__ section, for __Target Selection__, we select __Choose Resource Group__ and chose our rg-wa resource group we created earlier.
 * We scrolled to the bottom of the paye and chose __Run__
 
 We wait for the installation process to complete and it then displays:
 
 ![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/cloudwatch%20agent%20success.JPG)
+
+## Task 4: Start The Amazon CloudWatch Agent.
+
+* In the navigation menu on the AWS Systems manager page under __Node Management__, we chose run command. This takes us to the __Run Command__ page.
+* in the command document search box we input __AmazonCloudWatch-ManageAgent__ and press enter and then select the __AmazonCloudWatch-ManageAgent__.
+* In the command parameter section, for __Action__ we select __Configure__ and for __Optimal configuration source__ we select SSM.
+* for __Optimal configuration location__ we enter the parameter name __wa-cw-config-file-httpd-mariadb__
+This __wa-cw-config-file-httpd-mariadb__ is saved in the parameter store one of the capabilities of AWS systems manager. The json document is shown below :
+
+```
+{
+  "agent": {
+    "metrics_collection_interval": 60,
+    "run_as_user": "root"
+  },
+  "logs": {
+    "logs_collected": {
+      "files": {
+        "collect_list": [
+          {
+            "file_path": "/var/log/messages",
+            "log_group_name": "messages",
+            "log_stream_name": "{instance_id}"
+          },
+          {
+            "file_path": "/var/log/httpd/access_log",
+            "log_group_name": "httpd_access_log",
+            "log_stream_name": "{instance_id}"
+          },
+          {
+            "file_path": "/var/log/mariadb/wa-db-server.log",
+            "log_group_name": "db_general_query_log",
+            "log_stream_name": "{instance_id}"
+          },
+          {
+            "file_path": "/var/log/mariadb/mariadb.log",
+            "log_group_name": "mariadb_log",
+            "log_stream_name": "{instance_id}"
+          }
+        ]
+      }
+    }
+  },
+  "metrics": {
+    "append_dimensions": {
+      "AutoScalingGroupName": "${aws:AutoScalingGroupName}",
+      "ImageId": "${aws:ImageId}",
+      "InstanceId": "${aws:InstanceId}",
+      "InstanceType": "${aws:InstanceType}"
+    },
+    "metrics_collected": {
+      "disk": {
+        "measurement": ["used_percent"],
+        "metrics_collection_interval": 60,
+        "resources": ["*"]
+      },
+      "mem": {
+        "measurement": ["mem_used_percent"],
+        "metrics_collection_interval": 60
+      },
+      "statsd": {
+        "metrics_aggregation_interval": 60,
+        "metrics_collection_interval": 10,
+        "service_address": ":8125"
+      }
+    }
+  }
+}
+
+```
+* On the __Run__ command page in the __Target Selection__ section, for __Target Selection__, we select __Choose Resource Group__ and chose our rg-wa resource group we created earlier.
+* We scrolled to the bottom of the paye and chose __Run__
+We wait for the installation process to complete and it then displays:
+
+![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/cloudwatch%20agent%20success.JPG)
+
+
 
