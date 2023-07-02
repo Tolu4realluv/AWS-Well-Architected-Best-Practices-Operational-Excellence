@@ -57,7 +57,7 @@ With AWS, customers can assign metadata to their AWS resources in the form of Ta
 After succesfully creating the Tags, we get the following message:
 ![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/Tags.JPG)
 
-## Task 1: Create A Resource Group.
+## Task 2: Create A Resource Group.
 A resouce group is a collection of AWS resources in the same region that match a tag-based criteria provided in a search query. Resource group can be used to perform bulk actions such as Applying updates or security patches, upgrading an application version, installing new softwares, etc.
 * At the top of AWS management console, we searched for and selected __Resource Groups & Tag Editor__
 * we clicked create a resource group, the brower displayed the __create query-based-group page__
@@ -73,10 +73,21 @@ The browser displays the rg-wa Group details page.
 
 ![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/Resource%20group.JPG)
 
+## Task 3: Turn on Systems Manager for Amazon EC2 Instances.
 
+__AWS Systems Manager__ is a service you can use to control your infrastructure on AWS. Systems Manager provides a unified user interface to track and resolve operational issues across AWS applications and resources from a central place.
 
+__AWS Systems Manager Agent__ (SSM Agent) is Amazon software that can be installed and configured on Amazon EC2 instances and on-premise server, or a Virtual Machine (VM). The system manager agent makes it possible for system manager service to update, manage, and configure these resources.
+By default, AWS SSM is pre-install on Amazon linux, Amazon linux 2, Ubuntu server 16.04, 18.04 & 20.04. etc.
 
+* At the top of AWS management console, we searched for and selected __EC2__
+* we select instances and chose wa-web-server instance. we chose __Action__, __Security__, and __Modify IAM Role__.
+* on the __Modify IAM Role__ for __IAM Roles__ we chose __Ec2SSMServerInstanceProfile__ And the we chose __Update IAM Role__
+* We repeat the steps for the second EC2 and then Reboot both instances for the changes to take place.
+* After the reboot, we check for the EC2 in the system manager by searching for __Systems Manager__ at the top of AWS management console.
+* in the navigation menu under __Node Management__ we chose __Inventory__ and we scrolled down to see our EC2 instances located in the __Corresponding manage instances__ section.  
 
+![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/Resource%20group.JPG)
 
-
+Now we can use systems manager to Automate operational tasks on our EC2 instances.
 
