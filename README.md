@@ -87,7 +87,19 @@ By default, AWS SSM is pre-install on Amazon linux, Amazon linux 2, Ubuntu serve
 * After the reboot, we check for the EC2 in the system manager by searching for __Systems Manager__ at the top of AWS management console.
 * in the navigation menu under __Node Management__ we chose __Inventory__ and we scrolled down to see our EC2 instances located in the __Corresponding manage instances__ section.  
 
-![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/Resource%20group.JPG)
+![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/systems%20manager.JPG)
 
 Now we can use systems manager to Automate operational tasks on our EC2 instances.
 
+## Task 4: Install Amazon CloudWatch Agent with the SSM Agent.
+
+The CloudWatch agent monitors activities on our EC2 instances to collect logs and metrics. The CloudWatch agent needs to be installed with AWS Systems manager on the EC2 instances using the __Run__ command. Run command allows us to perform actions on EC2 instances remotely. This tool is especially helpful at scale, wher we can manage the configuration of many instances with a single command.
+
+* In the navigation menu on the AWS Systems manager page under __Node Management__, we chose run command. This takes us to the __Run Command__ page.
+* in the command document search box we input __AWS-ConfigureAWSPackage__ and press enter and then select the __AWS-ConfigureAWSPackage__.
+* On the __Run__ command page in the __Target Selection__ section, for __Target Selection__, we select __Choose Resource Group__
+* We scrolled to the bottom of the paye and chose __Run__
+
+We wait for the installation process to complete and it then displays:
+
+![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/systems%20manager.JPG)
