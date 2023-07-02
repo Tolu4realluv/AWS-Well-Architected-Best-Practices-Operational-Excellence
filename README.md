@@ -102,4 +102,5 @@ The CloudWatch agent monitors activities on our EC2 instances to collect logs an
 
 We wait for the installation process to complete and it then displays:
 
-![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/systems%20manager.JPG)
+![](https://github.com/Tolu4realluv/AWS-Well-Architected-Best-Practices-Operational-Excellence/blob/main/cloudwatch%20agent%20success.JPG)
+
