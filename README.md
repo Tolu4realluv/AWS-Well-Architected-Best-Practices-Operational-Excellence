@@ -7,7 +7,7 @@ In this project, we create AWS Resource Group consisting of two EC2 instances an
 
 By running this project, we will be able to:
 
-* Add custom tags to EC2 instances
+* Add custom tags to EC2 instances.
 * Create an AWS Resource Group for specific Amazon EC2 instances
 * Use AWS Systems Manager for configuration of Amazon EC2 instances
 * Install and start Amazon CloudWatch agent with AWS Systems Manager
